@@ -11,33 +11,15 @@
     <p>
         Cria um sistema que captura dois números e realize as 4 operações matemáticas simples(soma, subtração, divisão e multiplicação). Exiba os resultado das operações em uma alert.
     </p>
+        <label for="">Digite o primeiro número</label>
         <input type="text" name="var1" id="var1">
-
+        <br><br>
+        <label for="">Digite o segundo número</label>
         <input type="text" name="var2" id="var2">
+        <br><br>
+        <button onclick="exibirResultado()">Clique para capturar o nome</button>
 
-        <button onclick="exibirResutaldo()">Clique para capturar o nome</button>
-
-        <script>
-            function exibirResultado(){
-            const inputVar1 = document.getElementById("var1");
-            console.log(inputVar1.value);
-
-            const inputVar2 = document.getElementById("var2");
-            console.log(inputVar2.value);
-            
-            console.log(var1);
-            console.log(var2);
-
-            console.log(var1+var2);
-            console.log(var1-var2);
-            console.log(var1*var2);
-            console.log(var1/var2);
-            alert("A soma de "+var1+" + "+var2+" = "+Number(inputVar1+inputVar2));
-            alert("A soma de "+var1+" - "+var2+" = "+Number(inputVar1-inputVar2));
-            alert("A soma de "+var1+" * "+var2+" = "+Number(inputVar1*inputVar2));
-            alert("A soma de "+var1+" / "+var2+" = "+Number(inputVar1/inputVar2));
-        }
-        </script>
+        <script src="exercicio01.js"></script>
 
 
     
