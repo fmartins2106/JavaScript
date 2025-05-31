@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função em Java Script</title>
+</head>
+<body>
+    <h1>Capturando valores do HTML com Java Script</h1>
+    <input type="text" name="nome" id="nome">
+    <!-- Vinculando uma função do Javascript ao do evento de click do botão -->
+    <button onclick="exibirNome()">Clique para capturar o nome</button>
+
+    <script>
+        // Declarando uma função básica no JavaScript
+        
+        function exibirNome(){
+            // Mapear o elemento HTML através do ID e armazenar o valor na constante
+            // armazenar o valor na constante
+            const inputNome = document.getElementById("nome");
+            console.log(inputNome.value); 
+            // O value tem a função guardar o valor.
+        }
+    </script>
+    
+</body>
+</html>
