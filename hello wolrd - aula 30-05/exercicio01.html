@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Exercicio 1</h1>
+    <p>
+        Cria um sistema que captura dois números e realize as 4 operações matemáticas simples(soma, subtração, divisão e multiplicação). Exiba os resultado das operações em uma alert.
+    </p>
+        <input type="text" name="var1" id="var1">
+
+        <input type="text" name="var2" id="var2">
+
+        <button onclick="exibirResutaldo()">Clique para capturar o nome</button>
+
+        <script>
+            function exibirResultado(){
+            const inputVar1 = document.getElementById("var1");
+            console.log(inputVar1.value);
+
+            const inputVar2 = document.getElementById("var2");
+            console.log(inputVar2.value);
+            
+            console.log(var1);
+            console.log(var2);
+
+            console.log(var1+var2);
+            console.log(var1-var2);
+            console.log(var1*var2);
+            console.log(var1/var2);
+            alert("A soma de "+var1+" + "+var2+" = "+Number(inputVar1+inputVar2));
+            alert("A soma de "+var1+" - "+var2+" = "+Number(inputVar1-inputVar2));
+            alert("A soma de "+var1+" * "+var2+" = "+Number(inputVar1*inputVar2));
+            alert("A soma de "+var1+" / "+var2+" = "+Number(inputVar1/inputVar2));
+        }
+        </script>
+
+
+    
+</body>
+</html>
