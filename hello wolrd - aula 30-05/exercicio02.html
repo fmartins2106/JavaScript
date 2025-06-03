@@ -4,23 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercício 02</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            max-width: 100%;
+            border-radius: 10px;
+            background-image: linear-gradient(to right, rgba(252, 252, 99, 0.696));
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.638);
+        }
+          body {
+            height: 100vh;
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center;  
+           background-image: url(https://t2.tudocdn.net/602353?w=824&h=494);   /* Centraliza verticalmente */
+            
+        }
+        .email {
+            padding-top: 50px;
+            color: black;
+            font-weight: bold;
+            padding-top: 5px;
+        }
+        .email > input {
+            border-radius: 5px;
+        }
+        .senha > input {
+            border-radius: 5px;
+        }
+        .senha {
+            color: black;
+            font-weight: bold;
+        }
+        .button > button {
+            border-radius: 5px;
+            background-color: rgb(246, 255, 0);
+            color: blue;
+            font-weight: bold;
+            font-size: 18px;
+            width: 100px;
+            height: 40px;
+            cursor: pointer;            
+        }
+        
+           
+    </style>
 </head>
 <body>
 
     <div>
+        <div  class="div">
+            <h1>Login</h1>
+        <div  class="email">
         <label for="email">email</label>
         <input type="email" name="email" id="email" placeholder="exemplo@exemplo.com">
     </div>
-    <br>
-    <div>
+    <div class="senha">
         <label for="senha">senha</label>
-        <input type="password" name="password" id="password" placeholder="******">
-    </div>
-    <br><br>
-    <div>
-        <button onclick="cadastrarPessoa()">Entrar</button>
+        <input type="senha" name="senha" id="senha" placeholder="******">
     </div>
 
+     <div class="button">
+        <button onclick="cadastrarPessoa()">Entrar</button>
+     </div>
+    </div>
+    </div>
         <script src="exercico02.js"></script>
 
     
