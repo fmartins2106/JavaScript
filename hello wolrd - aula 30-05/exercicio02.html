@@ -13,9 +13,11 @@
         .div {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
+            flex-direction: column;
             width: 300px;
-            height: 200px;
+            height: 250px;
             padding: 10px;
             max-width: 100%;
             border-radius: 10px;
@@ -34,17 +36,21 @@
             padding-top: 50px;
             color: black;
             font-weight: bold;
-            padding-top: 5px;
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
         .email > input {
             border-radius: 5px;
+            padding-top: 5px;
         }
         .senha > input {
             border-radius: 5px;
+            padding-top: 5px;
         }
         .senha {
             color: black;
             font-weight: bold;
+            padding-bottom: 15px;
         }
         .button > button {
             border-radius: 5px;
@@ -54,10 +60,17 @@
             font-size: 18px;
             width: 100px;
             height: 40px;
-            cursor: pointer;            
+            cursor: pointer;  
+            margin-bottom: 20px;           
         }
-        
-           
+        .esqueceuSenha > a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-top: 30px;
+            padding-top: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
     </style>
 </head>
 <body>
@@ -76,6 +89,9 @@
 
      <div class="button">
         <button onclick="cadastrarPessoa()">Entrar</button>
+     </div>
+     <div class="esqueceuSenha">
+        <a href="#">Esqueceu a senha</a>
      </div>
     </div>
     </div>
