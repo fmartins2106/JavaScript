@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manupulando HTML através do Javascript</h1>
+
+    <label for="numA">Primeiro número</label>
+    <input type="text" id="numA" id="">
+    <br><br>
+    <label for="numB">Segundo número</label>
+    <input type="text" id="numB" id="">
+    <br><br>
+    <button onclick="somar()">Somar</button>
+
+    <p>Resultado:</p>
+    <div id="resultado"></div>
+
+    <script>
+    function somar(){
+        const numA = Number(document.getElementById("numA").value);
+        const numB = Number(document.getElementById("numB").value);
+
+        const divResultado = document.getElementById("resultado");
+
+        const soma = numA + numB;
+
+        divResultado.innerText = soma;
+    }
+
+    function somar(){
+        const number1 = Number(document.getElementById("number1").value);
+        const number2 = Number(document.getElementById("number2").value);
+        
+        const divResultado = document.getElementById("resultado");
+        
+        const soma = number1 + number2;
+
+        divResultado.innerText = soma;
+
+    }
+
+    </script>
+    
+    
+</body>
+</html>

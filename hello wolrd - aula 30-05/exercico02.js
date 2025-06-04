@@ -11,6 +11,5 @@ function cadastrarPessoa(){
     }else {
         alert("Usuário ou senhas incorretos.");
     }
-
     
 }
