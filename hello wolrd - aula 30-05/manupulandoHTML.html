@@ -16,8 +16,10 @@
     <br><br>
     <button onclick="somar()">Somar</button>
 
+
     <p>Resultado:</p>
     <div id="resultado"></div>
+    
 
     <script>
     function somar(){
@@ -30,19 +32,6 @@
 
         divResultado.innerText = soma;
     }
-
-    function somar(){
-        const number1 = Number(document.getElementById("number1").value);
-        const number2 = Number(document.getElementById("number2").value);
-        
-        const divResultado = document.getElementById("resultado");
-        
-        const soma = number1 + number2;
-
-        divResultado.innerText = soma;
-
-    }
-
     </script>
     
     
