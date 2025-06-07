@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Entendendo Objetos</h1>
+
+    <script>
+        /* Declarando um objeto vazio em JavaScript */
+        let aluno = {};
+
+        /* Declarando uim objeto com propriedades iniciais */
+        let aluno2 = {
+            codigo:1,
+            nome:"Harry",
+            matricula: true
+        };
+
+        console.log(aluno);
+        console.log(aluno2);
+
+        /* Retribuindo valor para uma propriedade do objeto */
+        aluno2.nome = "Harry Potter";
+        console.log(aluno2.nome);
+
+        const aluno3 = {
+            codigo:3,
+            nome: "Bob",
+            endereço:{
+                 Rua:"Rua nove",
+                 número:117,
+                 bairro:"Centro",
+                 estado: {
+                    sigla:"SC",
+                    nome:"Santa Catarina"
+                }
+            }
+        };
+        /* Imprimindo uma subprtopriedade do objeto. */
+        console.log(aluno3.rua);
+
+        /* Imprimindo uma subprtopriedade do objeto */
+
+        console.log("Rua"+aluno3.endereço.estado.sigla);
+
+        /*  Objeto com vetor */
+        const aluno4 = {
+            codigo: 4,
+            nome:"Rony",
+            notas:[8,9,9.10],
+        };
+
+        console.log("Notas do aluno:"+aluno4.notas);
+        console.log("Terceira nota:"+aluno4.notas[2]);
+
+    </script>
+    
+</body>
+</html>
