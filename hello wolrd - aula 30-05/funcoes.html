@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Entendendo funções</h1>
+    <input type="number" name="numA" id="numA">
+    <input type="number" name="numB" id="numB">
+    <button onclick="realizarOperacao('soma')">Somar</button>
+    
+    <script>
+        function realizarOperacao(operacao){
+            const a = Number(document.getElementById("numA").value);
+            const b = Number(document.getElementById("numbB").value);
+
+            if(operacao == "soma"){
+                imprimirSomar(a,b);
+            }
+        }
+        function imprimirSomar(a,b){
+            document.write(`A soma entre ${a} e ${b} é ${a+b}`);
+        }
+    </script>
+</body>
+</html>
