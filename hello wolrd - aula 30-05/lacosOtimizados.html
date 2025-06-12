@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laços</title>
+</head>
+<body>
+    <h1>Trabalhando com laços otimizados</h1>
+
+    <div id="listaFor"></div>
+    
+    <h2>Lista foreach</h2>
+
+    <div id="listaForEach"></div>
+
+    <h2>Lista forEach com função pré-definida</h2>
+    <div id="ListaFuncao"></div>
+
+<h2>Lista com número positivos</h2>
+    <div id="listaCalulo"></div>
+
+    <script>
+        const listaProdutos = [
+            "brigadeiro","coxinha","esfirra","pastel","bolo de chocolate","sonho"
+        ];
+
+
+        // Percorrer a lista através do for tradicional.
+        const divListaFor = document.getElementById("listaFor");
+        for(let contador = 0; contador < listaProdutos.length; contador++){
+            divListaFor.innerHTML += `<p>${listaProdutos[contador]}</p>`;
+        }
+
+        // Percorrer a lista através do for each
+        const divListaForEach = document.getElementById("listaForEach");
+        listaProdutos.forEach(function(produto){
+            divListaForEach.innerHTML += `<p>${produto}</p>`;
+        });
+
+        // arrow function 
+        listaProdutos.forEach(produto => {
+            divListaForEach.innerHTML += `<p>${produto}</p>`;
+        });
+
+        /* Imprimindo a lista d eprodutos através de um ForEach atrelado à uma função */
+        /* préviamente existente */
+
+        const divListaFuncao = document.getElementById("ListaFuncao");
+        function imprimirLista(item) {
+            divListaFuncao.innerHTML += `<p>${item}</p>`;
+        }
+        listaProdutos.forEach(imprimirLista);
+
+
+        /* Usando o foreach para imprimir */
+        const listaNumero = [8,-68,1,-9,589,-22,712,45];
+        const divListaPositivos = document.getElementById("listaCalulo");
+        listaNumero.forEach(numero =>{
+            if(numero >= 0){
+                divListaPositivos.innerHTML += `<p>${numero}</p>`;
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

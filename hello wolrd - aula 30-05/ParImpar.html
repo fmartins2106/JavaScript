@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio par ou impar</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: linear-gradient(to right, rgb(182, 182, 243),rgb(136, 138, 43));
+        }
+        .numero {
+            margin-top: 30px;
+        }
+
+        .numerosPares{
+            border: 1px black solid;
+            height: 200px;
+            width: 300px;
+            flex-wrap: wrap;
+            flex: auto;
+            margin: auto;
+            border-radius: 10px;
+        }
+        .numerosImpares{
+            border: 1px black solid;
+            height: 200px;
+            width: 300px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            flex: auto;
+            margin: auto;
+            border-radius: 10px;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        .div {
+            background-image: linear-gradient(to left, rgba(16, 16, 229, 0.748),rgba(141, 144, 17, 0.666));
+            border: 1px black solid;
+             height: 600px;
+            width: 400px;
+            flex-wrap: wrap;
+            flex: auto;
+            text-align: center;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+        button {
+            background-color: rgb(220, 205, 43);
+            color: black;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+        <div class="numero">
+        <input type="text" name="numero" id="numero" placeholder="Digite um número aqui.">
+        <button onclick="verificarParImpar()">Validar</button>
+    </div>
+        <h2>Número pares</h2>
+            <div class="numerosPares">
+                <div id="listaPares"></div>
+            </div>
+        <h2>Números Ímpares</h2>
+            <div class="numerosImpares">
+                <div id="lista"></div>
+            </div>
+    </div>
+
+    <div id="lista"></div>
+
+    <script src="ParImpar.js"></script>
+
+    
+</body>
+</html>
