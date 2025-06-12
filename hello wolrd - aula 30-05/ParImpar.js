@@ -25,6 +25,4 @@ lista.forEach(n => {
 });
 document.getElementById("numero").value = "";
 document.getElementById("numero").focus();
-
-
 }
