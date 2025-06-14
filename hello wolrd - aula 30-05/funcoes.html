@@ -7,22 +7,67 @@
 </head>
 <body>
     <h1>Entendendo funções</h1>
-    <input type="number" name="numA" id="numA">
-    <input type="number" name="numB" id="numB">
-    <button onclick="realizarOperacao('soma')">Somar</button>
+
+    <input type="number" id="numA">
+    <input type="number" id="numB">
+    <button onclick="realizarOperacao('somar')">Somar</button>
+    <button onclick="realizarOperacao('subtrair')">Subtrair</button>
+    <button onclick="realizarOperacao('multiplicar')">multiplicar</button>
+    <div id="resultado"></div>
     
     <script>
+        
         function realizarOperacao(operacao){
-            const a = Number(document.getElementById("numA").value);
-            const b = Number(document.getElementById("numbB").value);
 
-            if(operacao == "soma"){
+            const a = Number(document.getElementById('numA').value);
+            const b = Number(document.getElementById('numB').value);
+
+            if (operacao == 'somar') {
                 imprimirSomar(a,b);
             }
+
+            if (operacao == 'subtrair') {
+                imprimirSubtracao(a,b);
+            }
+            if(operacao === 'multiplicação'){
+                /* Capturando o retorno da fução multiplicar e guardando dentro dessa constante. */
+                const divresultado = multiplicar(a,b);
+                const resultado = document.getElementById("restultado");
+                divresultado.innerHTML = `A multiplicação entre ${a} e ${b} é ${resultado}`;
+            }
+
+            ifopcao = ''
+
+            limparCampos();
+
         }
-        function imprimirSomar(a,b){
-            document.write(`A soma entre ${a} e ${b} é ${a+b}`);
+
+        function imprimirSomar(a, b) {
+            const divResultado = document.getElementById('resultado');
+            divResultado.innerHTML = `A soma entre ${a} e ${b} é ${a+b}`;
+        
         }
+
+        function imprimirSubtracao(a, b) {
+            const divResultado = document.getElementById('resultado');
+            divResultado.innerHTML = `A subtração entre ${a} e ${b} é ${a-b}`;
+        }
+
+        function limparCampos(){
+            /*  Limpar as propriedas para próximo cadastro.*/
+            document.getElementById('numA').value="";
+            document.getElementById('numB').value="";
+
+            document.getElementById('numA').focus();
+
+            /* Função com retrorno e com parametros */
+            function multiplicar(a,b){
+                return a * b;
+            }
+            
+
+        }
+
     </script>
 </body>
 </html>

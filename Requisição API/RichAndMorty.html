@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisação de API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button onclick="listarTodos()">Listar todos os registros</button>
+    <button onclick="listarPeloId(4)">Listar um único registro</button>
+    <button onclick="salvar()">Salvar registro</button>
+    <button onclick="alterar()">Alterar registro</button>
+    <button onclick="deletar(1)">Deletar registro</button>
+
+    <div class="container">
+         <div id="resultado"></div>
+    </div>
+   
+
+    <script src="scripts/ajaxScript.js"></script>   
+
+    <script src="RichAndMorth.js"></script>
+
+</body>
+
+</html>
