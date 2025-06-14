@@ -22,13 +22,6 @@ function listarTodos() {
                         <p>Status: ${personagem.status}</p>
                     </div>`
             });
-
-            // if(this.status == 200){
-            //     alert("Registros encontrados com sucesso!");
-
-            // }else{
-            //     alert("Algo deu errado.");
-            // }
         }  
         
     };

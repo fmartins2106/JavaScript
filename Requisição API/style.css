@@ -1,20 +1,44 @@
-@charset "UTF-8";
+@charset "UTF-8"; 
+/* Define que o arquivo está usando codificação UTF-8, essencial para acentos e caracteres especiais. */
 
 * {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: 0;
+    padding: 0px;   /* Remove o espaçamento interno padrão de todos os elementos. */
+    margin: 0px;   /* Remove o espaçamento externo padrão de todos os elementos. */
+    box-sizing: border-box; /* Faz com que padding e borda sejam incluídos no tamanho total do elemento. */
+    
 }
-.div {
-    flex:auto;
-    flex-wrap: wrap;
-    border: 1px black solid;
-    width: 300px;
-    height: 150px;
+.card {
+    flex: 0 0 auto;             /* Define que o item não cresce nem encolhe, mantendo tamanho fixo. */
+                            /* Adiciona uma borda preta fina ao redor do card. */
+    width: 200px;               /* Define uma largura fixa de 200 pixels. */
+    height: auto;               /* A altura se ajusta automaticamente ao conteúdo interno. */
+    padding: 10px;              /* Adiciona um espaço interno de 10px dentro do card. */
+    border-radius: 10px;        /* Arredonda os cantos do card com raio de 10px. */
+    margin: 10px;               /* Adiciona espaçamento externo de 10px entre os cards. */
+    background-color: white;
 }
-.container {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
 
+.card img {
+    width: 100%;                /* Faz a imagem ocupar toda a largura do card. */
+    border-radius: 5px;         /* Arredonda os cantos da imagem. */
+    
+}
+
+#resultado {
+    display: flex;              /* Ativa o Flexbox para organizar os cards em linha. */
+    flex-wrap: wrap;            /* Permite que os cards quebrem para a linha de baixo se não couberem. */
+    gap: 50px;                  /* Define um espaçamento de 30px entre os cards (horizontal e vertical). */
+    justify-content: center;   /* Alinha os cards horizontalmente ao centro. */
+    padding: 20px;              /* Adiciona espaçamento interno ao redor do conteúdo do resultado. */
+}
+
+.container {
+    display: flex;              /* Também usa Flexbox para organizar os elementos filhos. */
+    gap: 20px;                  /* Espaçamento entre os filhos diretos da .container (como #resultado). */
+    padding: 20px;              /* Espaçamento interno geral dentro da container. */
+    justify-content: flex-start; /* Alinha os elementos à esquerda (início da linha). */
+    
+}
+body {
+    background-color: rgba(242, 238, 238, 0.526);
 }
