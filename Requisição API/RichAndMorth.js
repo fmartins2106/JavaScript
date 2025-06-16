@@ -18,6 +18,7 @@ function listarTodos() {
                     <div class="card">
                         <img src="${personagem.image}" alt="${personagem.name}">
                         <h3>${personagem.name}</h3>
+                        <p>ID: ${personagem.id}</p>
                         <p>Espécie: ${personagem.species}</p>
                         <p>Status: ${personagem.status}</p>
                     </div>`
@@ -52,6 +53,7 @@ function listarPorID(){
                     <div class="card">
                         <img src="${personagem.image}" alt="${personagem.name}">
                         <h3>${personagem.name}</h3>
+                        <p>ID: ${personagem.id}</p>
                         <p>Espécie: ${personagem.species}</p>
                         <p>Status: ${personagem.status}</p>
                     </div>`
