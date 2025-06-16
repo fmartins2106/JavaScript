@@ -8,17 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="h1">
+        <h1>The Rick and Morth  API</h1>
+    </div>
 
-    <button onclick="listarTodos()">Listar todos os registros</button>
-    <button onclick="listarPeloId(4)">Listar um único registro</button>
-    <button onclick="salvar()">Salvar registro</button>
-    <button onclick="alterar()">Alterar registro</button>
-    <button onclick="deletar(1)">Deletar registro</button>
-
+    <div>
+        <button class="button" onclick="listarTodos()">Listar todos os registros</button>
+        <button class="button" onclick="listarPorID()">Listar um único registro</button>
+        <label for="">Digite o ID do personagem</label>
+        <input type="number" name="number" id="number">
+       <!--  <button onclick="salvar()">Salvar registro</button>
+        <button onclick="alterar()">Alterar registro</button>
+        <button onclick="deletar(1)">Deletar registro</button> -->
+    </div>
     <!-- Container com layout flexível -->
     <div class="container">
           <!-- Resultado será inserido aqui com várias .card -->
          <div id="resultado"></div>
+         <div id="number"></div>
     </div>
    
     <!-- Scripts -->

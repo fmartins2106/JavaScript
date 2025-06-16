@@ -28,4 +28,38 @@ function listarTodos() {
 
     xhttp.open("GET", "https://rickandmortyapi.com/api/character");
     xhttp.send();
+
+    
+}
+
+function listarPorID(){
+    var xhttp = new XMLHttpRequest();
+
+    // definindo o tipo de retorno do meu objeto xhttp
+    xhttp.responseType = "json";
+
+    xhttp.onreadystatechange = function () {
+
+        // status da requisição já retornada para o browser
+        if (this.readyState == 4) {
+            console.log(xhttp);
+
+            const personagens = xhttp.response.results;
+            const id = document.getElementById('number');
+
+            personagens.forEach(personagem => {
+                id.innerHTML +=  `
+                    <div class="card">
+                        <img src="${personagem.image}" alt="${personagem.name}">
+                        <h3>${personagem.name}</h3>
+                        <p>Espécie: ${personagem.species}</p>
+                        <p>Status: ${personagem.status}</p>
+                    </div>`
+            });
+        }  
+        
+    };
+
+    xhttp.open("GET", "https://rickandmortyapi.com/api/character/"+id);
+    xhttp.send();
 }
